@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-talk",
+  "version": "1.0.0",
+  "description": "Tailwind talk",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production postcss public/tailwind/tailwind.css -o public/build/tailwind/tailwind.css",
+    "deploy": "gh-pages -d app",
+    "dev": "cross-env NODE_ENV=development concurrently \"postcss public/**/*.css -d public/build/ --base public/ --watch\"  \"browser-sync start -s 'public' --files 'public' --open --no-notify\""
+  },
+  "author": "Jag Reehal",
+  "license": "MIT",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
+    "cssnano": "^4.1.10",
+    "gh-pages": "^2.0.1",
+    "postcss-cli": "^6.1.2",
+    "prettier": "^1.18.2",
+    "tailwindcss": "^1.0.4"
+  }
+}

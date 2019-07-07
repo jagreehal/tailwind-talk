@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Tailwind Card React</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"
+    ></script>
+    <link rel="stylesheet" href="/build/tailwind/tailwind.css" />
+  </head>
+
+  <body class="min-h-screen flex justify-center items-center">
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const Badge = ({ className = '', text }) => (
+        <span
+          className={`${className} inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700`}
+        >
+          {text}
+        </span>
+      );
+
+      function App() {
+        return (
+          <div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img
+                class="w-full"
+                src="http://placekitten.com/g/300/300"
+                alt="Kitty!"
+              />
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                <p class="text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                  exercitationem praesentium nihil.
+                </p>
+              </div>
+              <div class="px-6 py-4">
+                <Badge className="mr-2" text="#photography" />
+                <Badge className="mr-2" text="#travel" />
+                <Badge text="#winter" />
+              </div>
+            </div>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
