@@ -83,6 +83,8 @@ For Vue - [vuetifyjs](https://vuetifyjs.com/en/)
 
 - Utility CSS
 
+- Think functional vs OO
+
 ![Marmite](https://upload.wikimedia.org/wikipedia/commons/4/4b/Marmite.jpg)
 
 ![Vegimite](https://upload.wikimedia.org/wikipedia/commons/1/10/Vegemiteontoast_large.jpg)
