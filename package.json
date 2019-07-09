@@ -4,7 +4,7 @@
   "description": "Tailwind talk",
   "scripts": {
     "build": "cross-env NODE_ENV=production postcss public/tailwind/tailwind.css -o public/build/tailwind/tailwind.css",
-    "deploy": "gh-pages -d app",
+    "deploy": "gh-pages -d public",
     "dev": "cross-env NODE_ENV=development concurrently \"postcss public/**/*.css -d public/build/ --base public/ --watch\"  \"browser-sync start -s 'public' --files 'public' --open --no-notify\""
   },
   "author": "Jag Reehal",
