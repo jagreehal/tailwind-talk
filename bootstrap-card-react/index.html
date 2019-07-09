@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Hello React!</title>
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/reactstrap@8.0.0/dist/reactstrap.full.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="container">
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const {
+        Badge,
+        Card,
+        CardImg,
+        CardText,
+        CardBody,
+        CardTitle,
+        CardSubtitle
+      } = Reactstrap;
+
+      function App() {
+        return (
+          <div>
+            <Card style={{ 'max-width': '24rem' }}>
+              <CardImg src="http://placekitten.com/g/300/300" alt="Kitty!" />
+              <CardBody>
+                <CardTitle>The Coldest Sunset</CardTitle>
+                <CardText>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                  exercitationem praesentium nihil.
+                </CardText>
+                <Badge className="mr-2" color="light" pill>
+                  #photography
+                </Badge>
+                <Badge className="mr-2" color="light" pill>
+                  #travel
+                </Badge>
+                <Badge color="light" pill>
+                  #winter
+                </Badge>
+              </CardBody>
+            </Card>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tailwind Card Vue</title>
+    <meta name="Description" content="Vue example of Tailwind" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <meta name="theme-color" content="#16161d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <link rel="apple-touch-icon" href="/assets/icon/icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
+    <link rel="stylesheet" href="/build/tailwind/tailwind.css" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"
+    ></script>
+  </head>
+
+  <body class="min-h-screen flex justify-center items-center">
+    <div id="app">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img
+          class="w-full"
+          src="http://placekitten.com/g/300/300"
+          alt="Kitty!"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p class="text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatibus quia, nulla! Maiores et perferendis eaque,
+            exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <badge-component class="mr-2">#photography</badge-component>
+          <badge-component class="mr-2">#travel</badge-component>
+          <badge-component>#winter</badge-component>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/babel">
+      const BadgeComponent = Vue.extend({
+        template: `
+          <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+          <slot></slot>
+        </span>
+        `
+      });
+
+      new Vue({
+        el: '#app',
+        components: {
+          BadgeComponent
+        }
+      });
+    </script>
+  </body>
+</html>
